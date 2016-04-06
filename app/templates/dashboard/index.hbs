@@ -1,0 +1,16 @@
+<h2>Dashboard</h2>
+{{#each model as |bet|}}
+  <p class="bet">
+    <h4>{{bet.title}}</h4>
+    <p>{{bet.description}}</p>
+    <p>
+      by: {{bet.creator.nickname}}
+    </p>
+    <p>
+      amount: {{bet.amount}}
+    </p>
+    <button class="btn btn-danger" {{action 'deleteBet' bet}}>Delete</button>
+  </p>
+{{/each}}
+
+<button class="btn btn-primary" {{action 'newBet'}}>New Bet</button>

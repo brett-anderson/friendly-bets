@@ -1,8 +1,9 @@
 $brand-blue: rgb(44, 62, 80);
+$brand-white: rgb(236,236,236);
 
 body {
   background: $brand-blue;
-  color: white;
+  color: $brand-white;
 }
 
 .main-container {
@@ -10,12 +11,25 @@ body {
   top: 0;
   left: 200px;
   width: 80%;
-
 }
 
 header {
   margin-top: 20px;
   height: 100px;
+
+  .brand {
+    width: 400px;
+    display: inline-block;
+    h1 {
+      width: 100%;
+      margin: 0;
+    }
+    a {
+      color: $brand-white;
+      text-transform: none;
+    }
+  }
+
   .profile {
     float: right;
     width: 200px;
@@ -31,7 +45,7 @@ header {
       width: 30px;
     }
     a {
-      color: white;
+      color: $brand-white;
     }
   }
 }

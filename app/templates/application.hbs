@@ -1,14 +1,16 @@
 <div class="main-container">
   <header>
+    <div class="brand">
+      {{#link-to 'dashboard'}}<h1 id="title">Friendly Bets</h1>{{/link-to}}
+    </div>
     {{#if session.isAuthenticated}}
       <div class="profile">
-        <img class="img-rounded" src="{{session.data.authenticated.profile.picture}}" />
+        {{#link-to 'dashboard.profile'}}<img class="img-rounded" src="{{session.data.authenticated.profile.picture}}" />{{/link-to}}
         <p>{{session.data.authenticated.profile.nickname}}</p>
         <a href="#" {{action 'logout'}}>Logout</a>
       </div>
     {{/if}}
   </header>
-  <h1 id="title">Playoff Pool</h1>
 
 
   {{outlet}}
