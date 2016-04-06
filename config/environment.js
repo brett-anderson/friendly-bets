@@ -1,4 +1,5 @@
 /* jshint node: true */
+var auth0Config = require('./auth0-variables');
 
 module.exports = function(environment) {
   var ENV = {
@@ -8,7 +9,6 @@ module.exports = function(environment) {
     firebase: 'https://YOUR-FIREBASE-NAME.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
-    firebase: 'https://incandescent-heat-1890.firebaseio.com/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -46,5 +46,23 @@ module.exports = function(environment) {
 
   }
 
+  ENV['ember-simple-auth'] = {
+    authenticationRoute: 'index',
+    routeAfterAuthentication: 'protected',
+    routeIfAlreadyAuthenticated: 'protected'
+  }
+
+  ENV['auth0-ember-simple-auth'] = {
+    clientID: auth0Config.AUTH0_CLIENT_ID,
+    domain: auth0Config.AUTH0_DOMAIN
+  }
+
+  ENV['contentSecurityPolicy'] = {
+    'font-src': "'self' data: https://*.auth0.com https://maxcdn.bootstrapcdn.com http://fonts.gstatic.com",
+    'style-src': "'self' 'unsafe-inline' http://use.typekit.net https://maxcdn.bootstrapcdn.com",
+    'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://*.auth0.com https://use.typekit.net",
+    'img-src': 'https://www.gravatar.com *.wp.com data: http://p.typekit.net',
+    'connect-src': "'self' http://localhost:* https://samples.auth0.com"
+  };
   return ENV;
 };
