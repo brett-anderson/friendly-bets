@@ -11,6 +11,20 @@ body {
   top: 0;
   left: 200px;
   width: 80%;
+
+  .chat {
+    background: $brand-white;
+    color: $brand-blue;
+    .message-text {
+      font-size: 20px;
+      display: inline-block;
+    }
+    .message-sender {
+      display: inline-block;
+      font-size: 12px;
+      color: #aaa;
+    }
+  }
 }
 
 header {

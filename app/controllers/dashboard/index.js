@@ -10,9 +10,19 @@ export default Ember.Controller.extend({
         creator: this.get("userProfile"),
         amount: 20,
         title: "Bet",
-        description: "My first bet"
+        description: "My first bet",
+        timestamp: Date.now()
       });
       newBet.save();
+    },
+
+    newMessage() {
+      let newMessage = this.store.createRecord('message', {
+        sender: this.get('userProfile'),
+        text: this.get('newMessageText'),
+        timestamp: Date.now()
+      });
+      newMessage.save().then( () => this.set('newMessageText', ''));
     },
 
     deleteBet(bet) {
