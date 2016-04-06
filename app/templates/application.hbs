@@ -1,10 +1,16 @@
-<h1 id="title">Welcome to Auth0 Ember Simple Auth</h1>
+<div class="main-container">
+  <header>
+    {{#if session.isAuthenticated}}
+      <div class="profile">
+        <img class="img-rounded" src="{{session.data.authenticated.profile.picture}}" />
+        <p>{{session.data.authenticated.profile.nickname}}</p>
+        <a href="#" {{action 'logout'}}>Logout</a>
+      </div>
+    {{/if}}
+  </header>
+  <h1 id="title">Playoff Pool</h1>
 
-<header>
-  {{#if session.isAuthenticated}}
-    <h3>You are currently logged as: {{session.data.authenticated.profile.email}}</h3>
-    <a href="#" {{action 'logout'}}>Logout</a>
-  {{/if}}
-</header>
 
-{{outlet}}
+  {{outlet}}
+
+</div>

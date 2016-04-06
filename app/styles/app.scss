@@ -1,1 +1,37 @@
-@import 'ember-paper';
+$brand-blue: rgb(44, 62, 80);
+
+body {
+  background: $brand-blue;
+  color: white;
+}
+
+.main-container {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 80%;
+
+}
+
+header {
+  margin-top: 20px;
+  height: 100px;
+  .profile {
+    float: right;
+    width: 200px;
+    text-align: right;
+    p {
+      display: inline-block;
+      font-size: 22px;
+      vertical-align: -webkit-baseline-middle;
+
+    }
+    img {
+      position: relative;
+      width: 30px;
+    }
+    a {
+      color: white;
+    }
+  }
+}
