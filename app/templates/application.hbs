@@ -5,7 +5,7 @@
     </div>
     {{#if session.isAuthenticated}}
       <div class="profile">
-        {{#link-to 'dashboard.profile'}}<img class="img-rounded" src="{{session.data.authenticated.profile.picture}}" />{{/link-to}}
+        {{#link-to 'dashboard.profile'}}<img class="img-circle" src="{{session.data.authenticated.profile.picture}}" />{{/link-to}}
         <p>{{session.data.authenticated.profile.nickname}}</p>
         <a href="#" {{action 'logout'}}>Logout</a>
       </div>

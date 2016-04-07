@@ -1,0 +1,20 @@
+<div class="chat">
+  <h4>Friendly Chat</h4>
+
+  {{#each messages as |message|}}
+  <div class="message">
+    <p class="message-sender">
+      {{message.sender.nickname}}
+    </p>
+    <p class="message-text">
+      {{message.text}}
+    </p>
+  </div>
+  {{/each}}
+</div>
+
+
+<div class="chat-input">
+  {{message-input action='newMessage' value=newMessageText}}
+  <button class="btn btn-primary" {{action 'newMessage' newMessageText}}>send</button>
+</div>

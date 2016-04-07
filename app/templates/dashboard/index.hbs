@@ -12,25 +12,5 @@
     <button class="btn btn-danger" {{action 'deleteBet' bet}}>Delete</button>
   </p>
 {{/each}}
-
-<div class="chat">
-  <h4>Da chat</h4>
-
-  {{#each model.messages as |message|}}
-  <div class="message">
-    <p class="message-sender">
-      {{message.sender.nickname}}
-    </p>
-    <p class="message-text">
-      {{message.text}}
-    </p>
-  </div>
-  {{/each}}
-</div>
-
-
-<div class="chat-input">
-  {{message-input action='newMessage' value=newMessageText}}
-  <button class="btn btn-primary" {{action 'newMessage'}}>send</button>
-</div>
+{{chat-container messages=model.messages newMessage=(action 'newMessage') }}
 <button class="btn btn-primary" {{action 'newBet'}}>New Bet</button>

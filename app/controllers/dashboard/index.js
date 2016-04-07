@@ -16,10 +16,10 @@ export default Ember.Controller.extend({
       newBet.save();
     },
 
-    newMessage() {
+    newMessage(messageText) {
       let newMessage = this.store.createRecord('message', {
         sender: this.get('userProfile'),
-        text: this.get('newMessageText'),
+        text: messageText,
         timestamp: Date.now()
       });
       newMessage.save().then( () => this.set('newMessageText', ''));
