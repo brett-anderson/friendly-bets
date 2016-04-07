@@ -26,6 +26,7 @@ body {
 
       .message {
         margin: 5px;
+        width: 70%;
         img {
           position: absolute;
           width: 50px;
@@ -34,7 +35,7 @@ body {
         .message-text {
           position: relative;
           left: 60px;
-          font-size: 16px;
+          font-size: 14px;
           margin: 0;
           &:last-child {
             margin-bottom: 10px;
@@ -43,9 +44,14 @@ body {
         .message-sender {
           position: relative;
           top: 0;
+          font-weight: 700;
           left: 60px;
-          font-size: 12px;
+          font-size: 14px;
           color: #333;
+          .timestamp {
+            color: #aaa;
+            font-weight: 400;
+          }
         }
       }
 

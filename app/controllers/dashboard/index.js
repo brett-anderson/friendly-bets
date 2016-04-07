@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
         amount: 20,
         title: "Bet",
         description: "My first bet",
-        timestamp: Date.now()
+        timestamp: new Date()
       });
       newBet.save();
     },
@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
         sender: this.get('userProfile'),
         previousSenderID: this.get('model.messages.lastObject.sender.user_id'),
         text: messageText,
-        timestamp: Date.now()
+        timestamp: new Date()
       });
       newMessage.save().then( () => this.set('newMessageText', ''));
     },
