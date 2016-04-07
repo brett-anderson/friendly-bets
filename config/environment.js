@@ -64,5 +64,7 @@ module.exports = function(environment) {
     'img-src': 'https://www.gravatar.com *.wp.com data: http://p.typekit.net',
     'connect-src': "'self' http://localhost:* https://samples.auth0.com"
   };
+
+
   return ENV;
 };
