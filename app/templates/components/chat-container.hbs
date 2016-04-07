@@ -1,21 +1,7 @@
 <div class="chat">
-  <h4>Friendly Chat</h4>
-
-  {{#each messages as |message|}}
-  <div class="message">
-    <p class="message-sender">
-      {{message.sender.nickname}}
-    </p>
-    <p class="message-text">
-      {{#emoji-tag}}
-      {{message.text}}
-      {{/emoji-tag}}
-
-    </p>
-  </div>
-  {{/each}}
+  {{messages-container class="messages-container" messages=messages}}
 
   <div class="chat-input">
-    {{message-input action='newMessage' value=newMessageText newMessage=(action 'newMessage')}}
+    {{message-input action='newMessage' value=newMessageText newMessage=(action 'newMessage') lastMessageID=lastMessageID}}
   </div>
 </div>
