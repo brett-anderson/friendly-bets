@@ -1,5 +1,8 @@
-<h2>Dashboard</h2>
-{{#each model.bets as |bet|}}
+{{chat-container messages=model.messages newMessage=(action 'newMessage') }}
+
+<div class="dashboard-container">
+  <h2>Dashboard</h2>
+  {{#each model.bets as |bet|}}
   <p class="bet">
     <h4>{{bet.title}}</h4>
     <p>{{bet.description}}</p>
@@ -11,6 +14,6 @@
     </p>
     <button class="btn btn-danger" {{action 'deleteBet' bet}}>Delete</button>
   </p>
-{{/each}}
-{{chat-container messages=model.messages newMessage=(action 'newMessage') }}
-<button class="btn btn-primary" {{action 'newBet'}}>New Bet</button>
+  {{/each}}
+  <button class="btn btn-primary" {{action 'newBet'}}>New Bet</button>
+</div>

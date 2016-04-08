@@ -1,3 +1,6 @@
+@import "loader";
+
+
 $brand-blue: rgb(44, 62, 80);
 $brand-white: rgb(236,236,236);
 
@@ -12,13 +15,17 @@ body {
     background: $brand-white;
     color: $brand-blue;
     position: fixed;
-    height: 800px;
+    height: 100%;
+    top: 150px;
+    bottom: 0px;
     width: 300px;
+    overflow: hidden;
     // left: 0;
     .messages-container {
       position: fixed;
-      height: 555px;
-      width: 100%;
+      height: 100%;
+      bottom: 43px;
+      width: 300px;
       overflow: scroll;
       &::-webkit-scrollbar {
         display: none;
@@ -26,8 +33,7 @@ body {
 
       .message {
         margin: 5px;
-        width: 70%;
-        
+
         img {
           position: absolute;
           width: 50px;
@@ -35,9 +41,8 @@ body {
         }
         .message-text {
           position: relative;
-          left: 60px;
+          margin-left: 60px;
           font-size: 14px;
-          margin: 0;
           &:last-child {
             margin-bottom: 10px;
           }
@@ -46,7 +51,7 @@ body {
           position: relative;
           top: 0;
           font-weight: 700;
-          left: 60px;
+          margin-left: 60px;
           font-size: 14px;
           color: #333;
           .timestamp {

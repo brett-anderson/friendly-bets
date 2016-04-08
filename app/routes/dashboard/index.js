@@ -7,7 +7,10 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     let session = this.get("session");
     return Ember.RSVP.hash({
       bets: this.store.findAll('bet'),
-      messages: this.store.findAll('message')
+      messages: this.store.query('message', {
+        limitToLast: 25
+
+      })
     });
   },
 });
