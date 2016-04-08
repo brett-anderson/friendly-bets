@@ -2,7 +2,7 @@
   {{#if message.showProfile}}
     <img class="img-rounded" src="{{message.senderPicture}}" />
     <p class="message-sender">
-      {{message.chatName}} <span class="timestamp">{{moment-from-now message.timestamp}}</span>
+      {{message.senderName}} <span class="timestamp">{{moment-from-now message.timestamp}}</span>
     </p>
   {{/if}}
   <p class="message-text">

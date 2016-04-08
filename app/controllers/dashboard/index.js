@@ -19,8 +19,12 @@ export default Ember.Controller.extend({
     newMessage(messageText) {
       let userID = this.get('userProfile.user_id');
       let senderID = this.get('model.messages.lastObject.senderID');
+      let givenName = this.get('userProfile.given_name');
+      let name = this.get('userProfile.name');
+      let email = this.get('userProfile.email');
+      let chatName = givenName || name || email;
       let newMessage = this.store.createRecord('message', {
-        senderName: this.get('chatName'),
+        senderName: chatName,
         senderPicture: this.get('userProfile.picture'),
         senderID: userID,
         showProfile:  userID !== senderID,
