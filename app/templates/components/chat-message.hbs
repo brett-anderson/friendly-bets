@@ -1,8 +1,8 @@
 <div class="message">
-  {{#if showProfile}}
+  {{#if message.showProfile}}
     <img class="img-rounded" src="{{message.sender.picture}}" />
     <p class="message-sender">
-      {{message.chatName}} <span class="timestamp">{{moment-from-now message.timestamp}}</span> 
+      {{message.chatName}} <span class="timestamp">{{moment-from-now message.timestamp}}</span>
     </p>
   {{/if}}
   <p class="message-text">
