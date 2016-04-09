@@ -3,7 +3,7 @@ var auth0Config = require('./auth0-variables');
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'playoff-pool',
+    modulePrefix: 'friendly-bets',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
     firebase: 'https://incandescent-heat-1890.firebaseio.com/',
