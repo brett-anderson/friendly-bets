@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     return this.get('userProfile.user_id') === this.get("bet.creator.user_id");
   }),
 
-  userIsTakingBet: Ember.computed(function() {
+  userIsTakingBet: Ember.computed('bet.takers.[]', function() {
     let takers = this.get('bet.takers');
     if(!takers) {return false;}
 
