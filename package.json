@@ -1,7 +1,7 @@
 {
-  "name": "playoff-pool",
+  "name": "friendly-bets",
   "version": "0.0.0",
-  "description": "Small description for playoff-pool goes here",
+  "description": "Small description for friendly-bets goes here",
   "private": true,
   "directories": {
     "doc": "doc",

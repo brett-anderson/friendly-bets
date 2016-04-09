@@ -8,6 +8,7 @@
   background: $brand-white;
   right: 0;
   color: $brand-dark;
+  overflow: scroll;
 
 }
 
@@ -20,13 +21,6 @@ header {
   background: $brand-dark;
   z-index: 2;
   box-shadow: 1px 1px 1px #444;
-  h2 {
-    color: $brand-highlight;
-    position: absolute;
-    left: 310px;
-    margin: 0;
-    top: 14px;
-  }
 }
 .no-bets {
   text-align: center;
@@ -47,5 +41,36 @@ header {
 }
 
 .btn-save-bet {
-  
+
+}
+.dashboard-index {
+  text-align: center;
+  a {
+    // padding: 50px;
+
+  }
+  .bets {
+  }
+  .new-bet {
+
+  }
+}
+.dashboard-header {
+  position: absolute;
+  left: 310px;
+  top: 14px;
+  width: 300px;
+  h2 {
+    color: $brand-highlight;
+    margin: 0;
+    display: inline-block;
+  }
+  a.new-bet {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    margin-left: 15px;
+  }
+
 }

@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
     saveBet(bet) {
       bet.setProperties({
         creator: this.get("userProfile"),
+        takers: [],
         timestamp: new Date()
       });
       bet.save().then( () => this.transitionToRoute('dashboard.bets') );

@@ -1,6 +1,6 @@
 <p class="bet">
 
-  {{#link-to 'dashboard.bets.show' bet}}<h4>Bet - {{bet.title}}</h4>{{/link-to}}
+  {{#link-to 'dashboard.bets.show' bet}}<h4>Bet by {{bet.creator.nickname}}</h4>{{/link-to}}
   <p>{{bet.description}}</p>
   <p>
     by: {{bet.creator.nickname}}
@@ -8,5 +8,17 @@
   <p>
     amount: {{bet.amount}}
   </p>
-  <!-- <button class="btn btn-danger" {{action 'deleteBet' bet}}>Delete</button> -->
+  <p>
+    takers: {{bet-takers users=bet.takers}}
+  </p>
+
+  <div class="bet-actions">
+    {{#if userOwnsBet}}
+      <button class="btn btn-danger" {{action 'deleteBet' bet}}>Delete</button>
+    {{else}}
+    {{#unless userIsTakingBet}}
+      <button class="btn btn-danger" {{action 'placeBet' bet}}>Bet {{bet.amount}} against</button>
+      {{/unless}}
+    {{/if}}
+  </div>
 </p>

@@ -1,7 +1,10 @@
 <div class="dashboard-container">
   <header>
     {{profile-container}}
-    {{#link-to 'dashboard'}}<h2>Dashboard</h2>{{/link-to}}
+    <div class="dashboard-header">
+      {{#link-to 'dashboard'}}<h2>Dashboard</h2>{{/link-to}}
+      {{link-to 'Make a Bet' 'dashboard.bets.new' class="btn new-bet"}}
+    </div>
   </header>
   <div class="left-container">
     {{chat-container messages=model.messages newMessage=(action 'newMessage') }}
