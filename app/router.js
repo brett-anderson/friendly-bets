@@ -8,6 +8,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('dashboard', function() {
+    this.route('bets', function() {
+      this.route('new');
+    })
     this.route('profile');
   });
 });

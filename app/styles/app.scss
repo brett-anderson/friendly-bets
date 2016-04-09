@@ -1,115 +1,46 @@
-@import "loader";
-
-
-$brand-blue: rgb(44, 62, 80);
+$brand-dark: #252839;
+$brand-text: #b5b5b7;
+$brand-highlight: #f2b632;
+$brand-gray: #677077;
 $brand-white: rgb(236,236,236);
 
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+@import "dashboard";
+@import "loader";
+@import "left_container";
+@import "profile";
+@import "chat";
+
+
 body {
-  background: $brand-blue;
-  color: $brand-white;
+  background: $brand-dark;
+  color: $brand-text;
+  font-family: 'Poppins', sans-serif;
   position: relative;
 }
 
-.main-container {
-  .chat {
-    background: $brand-white;
-    color: $brand-blue;
-    position: fixed;
-    height: 100%;
-    top: 150px;
-    bottom: 0px;
-    width: 300px;
-    overflow: hidden;
-    // left: 0;
-    .messages-container {
-      position: fixed;
-      height: 100%;
-      bottom: 43px;
-      width: 300px;
-      overflow: scroll;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
-      .message {
-        margin: 5px;
-
-        img {
-          position: absolute;
-          width: 50px;
-          vertical-align: top;
-        }
-        .message-text {
-          position: relative;
-          margin-left: 60px;
-          font-size: 14px;
-          &:last-child {
-            margin-bottom: 10px;
-          }
-        }
-        .message-sender {
-          position: relative;
-          top: 0;
-          font-weight: 700;
-          margin-left: 60px;
-          font-size: 14px;
-          color: #333;
-          .timestamp {
-            color: #aaa;
-            font-weight: 400;
-          }
-        }
-      }
-
-    }
-    .chat-input {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      width: 260px;
-    }
-  }
-}
-
-header {
-  margin-top: 20px;
-  height: 100px;
-
-  .brand {
-    width: 400px;
-    display: inline-block;
-    h1 {
-      width: 100%;
-      margin: 0;
-    }
-    a {
-      color: $brand-white;
-      text-transform: none;
-    }
-  }
-
-  .profile {
-    float: right;
-    width: 200px;
-    text-align: right;
-    p {
-      display: inline-block;
-      font-size: 18px;
-      vertical-align: -webkit-baseline-middle;
-
-    }
-    img {
-      position: relative;
-      width: 30px;
-    }
-    a {
-      color: $brand-white;
-    }
-  }
-}
 .emoji {
     width: 2.25em;
     height: 2.25em;
     display: inline-block;
     margin-bottom: -0.25em;
+}
+
+.dashboard-container {
+  height:100vh;
+}
+
+.left-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  background: red;
+}
+
+.splash {
+  margin-top: 300px;
+  text-align: center;
 }

@@ -1,0 +1,48 @@
+
+.dashboard {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 300px;
+  height: auto;
+  background: $brand-white;
+  right: 0;
+  color: $brand-dark;
+
+}
+
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  background: $brand-dark;
+  z-index: 2;
+  box-shadow: 1px 1px 1px #444;
+  h2 {
+    color: $brand-highlight;
+    position: absolute;
+    left: 310px;
+    margin: 0;
+    top: 14px;
+  }
+}
+.no-bets {
+  text-align: center;
+  h2 {
+    margin-top: 150px;
+  }
+  .new-bet {
+    margin-top: 50px;
+    background: $brand-highlight;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    box-shadow: 1px 1px 1px #444;
+    &:hover {
+      background: $brand-dark;
+    }
+  }
+}

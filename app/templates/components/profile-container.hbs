@@ -1,0 +1,5 @@
+<div class="profile">
+  {{#link-to 'dashboard.profile'}}<img class="img-circle" src="{{session.data.authenticated.profile.picture}}" />{{/link-to}}
+  {{session.data.authenticated.profile.nickname}}
+  - <a href="#" {{action 'logout'}}>Logout</a>
+</div>

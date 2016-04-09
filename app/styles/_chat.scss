@@ -1,0 +1,52 @@
+.chat {
+  font-family: 'Inconsolata', ;
+
+  .messages-container {
+    position: absolute;
+    overflow: scroll;
+    width: 300px;
+    top: 60px;
+    bottom: 50px;
+    padding-left: 5px;
+    overflow: scroll;
+    background: $brand-dark;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .message {
+      margin: 5px;
+
+      img {
+        position: absolute;
+        width: 50px;
+        vertical-align: top;
+      }
+      .message-text {
+        position: relative;
+        margin-left: 60px;
+        font-size: 14px;
+        &:last-child {
+          margin-bottom: 10px;
+        }
+      }
+      .message-sender {
+        position: relative;
+        top: 0;
+        font-weight: 700;
+        margin-left: 60px;
+        font-size: 14px;
+        .timestamp {
+          font-weight: 400;
+        }
+      }
+    }
+
+  }
+  .chat-input {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 260px;
+  }
+}
