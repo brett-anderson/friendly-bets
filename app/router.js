@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('dashboard', function() {
     this.route('bets', function() {
       this.route('new');
+      this.route('show', {path: "/:bet_id"})
     })
     this.route('profile');
   });

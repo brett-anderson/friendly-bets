@@ -11,7 +11,8 @@ $brand-white: rgb(236,236,236);
 @import "left_container";
 @import "profile";
 @import "chat";
-
+@import "new_bet";
+@import "bet";
 
 body {
   background: $brand-dark;
@@ -43,4 +44,16 @@ body {
 .splash {
   margin-top: 300px;
   text-align: center;
+}
+.btn {
+  background: $brand-highlight;
+  border-radius: 30px;
+  color: $brand-dark;
+  border: none;
+  box-shadow: 1px 1px 1px #444;
+  &:hover {
+    background: $brand-dark;
+    color: $brand-highlight;
+  }
+
 }

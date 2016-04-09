@@ -1,2 +1,11 @@
-bets hi
-{{outlet}}
+{{bet-container}}
+{{#each model as |bet|}}
+{{#unless bet.isNew}}
+  {{single-bet bet=bet}}
+{{/unless}}
+{{else}}
+  <div class="no-bets">
+    <h2>You have no bets. Feelin' lucky, punk?</h2>
+    {{link-to "Create new bet" 'dashboard.bets.new' class="btn btn-primary new-bet"}}
+  </div>
+{{/each}}

@@ -5,16 +5,6 @@ export default Ember.Controller.extend({
   userProfile: Ember.computed.reads('session.data.authenticated.profile'),
 
   actions:  {
-    newBet() {
-      let newBet = this.store.createRecord('bet', {
-        creator: this.get("userProfile"),
-        amount: 20,
-        title: "Bet",
-        description: "My first bet",
-        timestamp: new Date()
-      });
-      newBet.save();
-    },
 
     newMessage(messageText) {
       let userID = this.get('userProfile.user_id');

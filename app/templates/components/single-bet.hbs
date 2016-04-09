@@ -1,0 +1,12 @@
+<p class="bet">
+
+  {{#link-to 'dashboard.bets.show' bet}}<h4>Bet - {{bet.title}}</h4>{{/link-to}}
+  <p>{{bet.description}}</p>
+  <p>
+    by: {{bet.creator.nickname}}
+  </p>
+  <p>
+    amount: {{bet.amount}}
+  </p>
+  <!-- <button class="btn btn-danger" {{action 'deleteBet' bet}}>Delete</button> -->
+</p>

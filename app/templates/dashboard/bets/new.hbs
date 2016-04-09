@@ -1,2 +1,16 @@
-new
-{{outlet}}
+<div class="new-bet">
+  <h3>New Bet</h3>
+  <form class="form-inline">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon">I declare that </div>
+        {{input required type="text" value=model.description class="form-control" placeholder="..."}}
+      </div>
+      <div class="input-group">
+        <div class="input-group-addon">$</div>
+        {{input required type="text" class="form-control" value=model.amount placeholder="Amount"}}
+      </div>
+    </div>
+    <button class="btn btn-save-bet" {{action 'saveBet' model}}>Create Bet</button>
+</form>
+</div>

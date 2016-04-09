@@ -37,12 +37,15 @@ header {
     margin-top: 50px;
     background: $brand-highlight;
     border-radius: 30px;
-    width: 200px;
-    height: 50px;
+    padding: 15px 30px;
     border: none;
     box-shadow: 1px 1px 1px #444;
     &:hover {
       background: $brand-dark;
     }
   }
+}
+
+.btn-save-bet {
+  
 }
