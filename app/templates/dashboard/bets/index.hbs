@@ -1,10 +1,31 @@
-{{#each model as |bet|}}
-{{#unless bet.isNew}}
-  {{single-bet bet=bet}}
-{{/unless}}
-{{else}}
-  <div class="no-bets">
-    <h2>You have no bets. Feelin' lucky, punk?</h2>
-    {{link-to "Create new bet" 'dashboard.bets.new' class="btn btn-primary new-bet"}}
+<div class="row dashboard-inner">
+  <div class="bet-container all-bets col-md-6">
+    <header>
+      <h3>All Bets</h3>
+    </header>
+    <div class="bets-each">
+
+      {{#each model.allBets as |bet|}}
+      {{#unless bet.isNew}}
+      {{single-bet bet=bet}}
+      {{/unless}}
+      {{/each}}
   </div>
-{{/each}}
+  </div>
+
+  <div class="bet-container my-bets  col-md-6">
+    <header>
+      <h3>My Bets</h3>
+    </header>
+    {{#each model.myBets as |bet|}}
+    {{#unless bet.isNew}}
+    {{single-bet bet=bet}}
+    {{/unless}}
+    {{else}}
+    <div class="no-bets">
+      <h4>You have no bets. Feelin' lucky, punk?</h4>
+      {{link-to "Create new bet" 'dashboard.bets.new' class="btn btn-primary new-bet"}}
+    </div>
+    {{/each}}
+  </div>
+</div>

@@ -2,14 +2,16 @@
   background: $brand-dark;
   padding: 15px;
   width: 300px;
+  height: 87px;
   text-align: left;
   position: absolute;
   top: 0;
   left: 0;
-  height: 60px;
+  z-index: 1;
+  border-bottom: 1px solid black;
   p {
-    display: block;
-    color: $brand-text;
+    display: inline-block;;
+    color: $brand-highlight;
     font-size: 18px;
     vertical-align: -webkit-baseline-middle;
 
@@ -19,6 +21,6 @@
     width: 30px;
   }
   a {
-    color: $brand-text;
+    color: $brand-highlight;
   }
 }
