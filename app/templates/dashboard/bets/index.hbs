@@ -5,7 +5,7 @@
     </header>
     <div class="bets-each">
 
-      {{#each model.allBets as |bet|}}
+      {{#each allBetsReversed as |bet|}}
       {{#unless bet.isNew}}
       {{single-bet bet=bet}}
       {{/unless}}

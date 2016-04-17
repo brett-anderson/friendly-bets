@@ -4,8 +4,7 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 export default Ember.Route.extend({
   session: Ember.inject.service(),
   userProfile: Ember.computed.reads('session.data.authenticated.profile'),
-
-
+  
   model() {
     return Ember.RSVP.hash({
       myBets: this.store.query('bet', {
